@@ -1,0 +1,1 @@
+{"version":3,"file":"continents.js","sourceRoot":"","sources":["../../src/mocks/continents.ts"],"names":[],"mappings":";;AAEA,MAAM,cAAc,GAAoB;IACtC;QACE,IAAI,EAAE,IAAI;QACV,IAAI,EAAE,QAAQ;QACd,IAAI,EAAE,QAAQ;KACf;IACD;QACE,IAAI,EAAE,IAAI;QACV,IAAI,EAAE,QAAQ;QACd,IAAI,EAAE,QAAQ;KACf;CACF,CAAC;AAEF,kBAAe,cAAc,CAAC"}

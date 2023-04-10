@@ -1,0 +1,1 @@
+{"version":3,"file":"languages.js","sourceRoot":"","sources":["../../src/mocks/languages.ts"],"names":[],"mappings":";;AAEA,MAAM,YAAY,GAAmB;IACnC;QACE,IAAI,EAAE,IAAI;QACV,IAAI,EAAE,QAAQ;QACd,SAAS,EAAE,CAAC,IAAI,CAAC;KAClB;IACD;QACE,IAAI,EAAE,IAAI;QACV,IAAI,EAAE,WAAW;QACjB,SAAS,EAAE,CAAC,IAAI,CAAC;KAClB;CACF,CAAC;AAEF,kBAAe,YAAY,CAAC"}
