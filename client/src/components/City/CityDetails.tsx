@@ -6,7 +6,7 @@ import {
   List,
   ListItem,
   ListItemText,
-  Tooltip,
+  CircularProgress,
   IconButton,
 } from "@mui/material";
 import { Update } from "@mui/icons-material";
@@ -64,13 +64,18 @@ export default function CityDetails({ code }: Code) {
     };
   }
 
-  if (loading) return <div className="h-screen">Loading city...</div>;
-  if (error) return <div className="h-screen">Error : {error.message}</div>;
+  if (loading)
+    return (
+      <div className="flex justify-center">
+        <CircularProgress size="10rem" />
+      </div>
+    );
+  if (error) return <div>Error : {error.message}</div>;
 
   return (
     <div>
       {data?.city.code ? (
-        <div className="h-max">
+        <div>
           <div className="flex items-stretch">
             <Avatar aria-label="recipe">{data?.city.code}</Avatar>
             <h1 className="ml-4 mt-1 text-2xl">{data?.city.name}</h1>

@@ -11,6 +11,7 @@ import {
   Drawer,
   IconButton,
   Tooltip,
+  CircularProgress,
 } from "@mui/material";
 import {
   ExpandLess,
@@ -112,13 +113,18 @@ export default function CountryDetails({ code }: Code) {
     };
   }
 
-  if (loading) return <div className="h-screen">Loading country...</div>;
-  if (error) return <div className="h-screen">Error : {error.message}</div>;
+  if (loading)
+    return (
+      <div className="flex justify-center">
+        <CircularProgress size="10rem" />
+      </div>
+    );
+  if (error) return <div>Error : {error.message}</div>;
 
   return (
     <div>
       {data?.country.code ? (
-        <div className="h-screen">
+        <div>
           <div className="flex items-stretch">
             <Tooltip title="Insert flag" placement="top">
               <IconButton

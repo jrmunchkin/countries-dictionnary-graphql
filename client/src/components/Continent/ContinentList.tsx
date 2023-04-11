@@ -12,6 +12,7 @@ import {
   ListItemText,
   Button,
   Drawer,
+  CircularProgress,
 } from "@mui/material";
 import { ArrowForward } from "@mui/icons-material";
 import CountryPanel from "../Country/CountryPanel";
@@ -40,7 +41,12 @@ export default function ContinentList() {
       setIsPanelOpen({ ["left"]: open });
     };
 
-  if (loading) return <p>Loading continents...</p>;
+  if (loading)
+    return (
+      <div className="flex h-screen justify-center items-center">
+        <CircularProgress size="10rem" />
+      </div>
+    );
   if (error) return <p>Error : {error.message}</p>;
 
   return (

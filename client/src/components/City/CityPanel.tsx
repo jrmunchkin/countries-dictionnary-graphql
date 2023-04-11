@@ -2,7 +2,7 @@ import { useQuery } from "@apollo/client";
 import { useState } from "react";
 import {
   Paper,
-  Toolbar,
+  CircularProgress,
   Table,
   TableContainer,
   TableBody,
@@ -40,6 +40,14 @@ export default function CityPanel({ countryCode }: CityPanel) {
   const handleCloseCreateCity = () => {
     setIsCreateCityOpen(false);
   };
+
+  if (loading)
+    return (
+      <div className="flex h-screen justify-center items-center">
+        <CircularProgress size="10rem" />
+      </div>
+    );
+  if (error) return <div className="h-screen">Error : {error.message}</div>;
 
   return (
     <div className="p-6">
@@ -125,8 +133,8 @@ export default function CityPanel({ countryCode }: CityPanel) {
           className="mt-4"
         />
       </div>
-      <div>
-        <CityDetails code={cityCode} />
+      <div className="h-screen">
+        {cityCode ? <CityDetails code={cityCode} /> : <></>}
       </div>
     </div>
   );
