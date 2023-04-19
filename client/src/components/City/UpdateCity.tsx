@@ -53,8 +53,8 @@ export default function UpdateCity({
         code: city.code,
         input: {
           name: fields.name,
-          area: fields.area,
-          population: fields.population,
+          area: Number(fields.area),
+          population: Number(fields.population),
         },
       },
       onCompleted: (result) => {

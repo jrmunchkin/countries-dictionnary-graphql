@@ -83,8 +83,8 @@ export default function UpdateCountry({
         code: country.code,
         input: {
           name: fields.name,
-          area: fields.area,
-          population: fields.population,
+          area: Number(fields.area),
+          population: Number(fields.population),
           currency: fields.currency,
           capital: capital,
         },
